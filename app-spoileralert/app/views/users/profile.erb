@@ -1,0 +1,28 @@
+<link rel=”stylesheet” type=”text/css” href=”/style.css” />
+<div id='header'>
+    <h1>SpoilerAlert!</h1>
+    <hr>
+</div>
+
+<div class='profile'>
+    <h3> Welcome, <u><%=current_user.name%></u></h3>
+    <img id='profile_picture' src= 'https://www.google.com/url?sa=i&url=https%3A%2F%2Fxxiituning.com%2Fproducts%2Funiversal-carbon-fibre-rear-spoiler-wing-kit&psig=AOvVaw2gqNXSq_Poj89BiIqrXz25&ust=1618527744467000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCIjhl-zr_u8CFQAAAAAdAAAAABAL'/>
+    <h2><u> Recent Threads! </u></h2>
+
+    <table id='recent_thread_table'>
+        <%threads.each do |thread|%>
+        <tr>
+            <td>
+                <div class='thread'>
+                    <h2 class='topic'><%=thread.topic%>
+                        <h4><%=thread.time_created%><h4>
+                    </h2>
+                    <h4 class='author'><%=thread.author%></h4>
+                    <p class='thread_text'>
+                        <%=thread.text%>
+                    </p>
+
+                </div>
+            </td>
+        </tr>
+    </table>                
